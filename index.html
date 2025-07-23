@@ -1,98 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Unresponsive Web Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    header {
-      background-color: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #555;
-      padding: 15px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-right: 30px;
-      font-size: 18px;
-    }
-
-    .container {
-      display: flex;
-      margin: 20px;
-    }
-
-    .sidebar {
-      width: 25%;
-      background-color: #f4f4f4;
-      padding: 20px;
-    }
-
-    .main {
-      width: 75%;
-      background-color: #e2e2e2;
-      padding: 20px;
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 10px;
-      text-align: center;
-      margin-top: 20px;
-    }
-    @media screen and (max-width: 600px) {
-      .container {
-        flex-direction: column;
-      }
-      .sidebar, .main {
-        width: 100%;
-      }
-      nav a {
-        display: block;
-        margin-bottom: 10px;
-      }
-        
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+<style>
+    .click-me {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
 <body>
-
-  <header>
-    <h1>My Unresponsive Website</h1>
-  </header>
-
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-  </nav>
-
-  <div class="container">
-    <div class="sidebar">
-      <h2>Sidebar</h2>
-      <p>Some sidebar content here.</p>
-    </div>
-    <div class="main">
-      <h2>Main Content</h2>
-      <p>This is the main area of the website with more information.</p>
-    </div>
-  </div>
-
-  <footer>
-    <p>Copyright &copy; 2025</p>
-  </footer>
+    <button class="click-me">click me</button>
 
 </body>
 </html>
