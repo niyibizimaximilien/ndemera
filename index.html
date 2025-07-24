@@ -1093,6 +1093,155 @@
                 // Here you would load English content
             }
         });
+        // Language data
+        const translations = {
+            en: {
+                home: "Home",
+                projects: "Projects",
+                skills: "Skills",
+                about: "About",
+                contact: "Contact",
+                language: "English",
+                heroTitle: "Hi, I'm Ali Khan",
+                heroSubtitle: "A Pakistani Web Developer building digital experiences with local flavor and global standards.",
+                viewWork: "View My Work",
+                hireMe: "Hire Me",
+                myProjects: "My Projects",
+                project1Title: "PakCart - E-commerce",
+                project1Desc: "An e-commerce platform specializing in Pakistani handicrafts with multi-vendor support.",
+                liveDemo: "Live Demo",
+                viewCode: "View Code",
+                mySkills: "My Skills",
+                techSkills: "Technical Skills",
+                htmlCss: "HTML/CSS",
+                javascript: "JavaScript",
+                react: "React",
+                nodejs: "Node.js",
+                profSkills: "Professional Skills",
+                teamwork: "Teamwork (Jamaat Spirit)",
+                problemSolving: "Problem Solving",
+                adaptability: "Adaptability (Like Pakistani Chai)",
+                communication: "Communication",
+                aboutMe: "About Me",
+                aboutTitle: "Web Developer from Lahore, Pakistan",
+                aboutText1: "I'm a passionate web developer with 5+ years of experience creating modern web applications. I specialize in JavaScript frameworks and have worked with clients from all over the world while maintaining my Pakistani roots.",
+                aboutText2: "My journey in tech started at COMSATS University Lahore, and since then I've been dedicated to creating digital solutions that solve real problems for people in Pakistan and beyond.",
+                name: "Name",
+                email: "Email",
+                education: "Education",
+                phone: "Phone",
+                interests: "Personal Interests",
+                foodStreet: "Food Street Visits",
+                poetry: "Urdu Poetry",
+                northern: "Northern Areas",
+                cricket: "Cricket",
+                getInTouch: "Get In Touch",
+                contactInfo: "Contact Information",
+                location: "Location",
+                callWhatsapp: "Call/WhatsApp",
+                followMe: "Follow Me",
+                yourName: "Your Name",
+                yourEmail: "Your Email",
+                subject: "Subject",
+                message: "Message",
+                sendMessage: "Send Message",
+                copyright: "© 2023 Ali Khan. All Rights Reserved."
+            },
+            ur: {
+                home: "ہوم",
+                projects: "پروجیکٹس",
+                skills: "مہارتیں",
+                about: "میرے بارے میں",
+                contact: "رابطہ",
+                language: "اردو",
+                heroTitle: "ہیلو، میں علی خان ہوں",
+                heroSubtitle: "ایک پاکستانی ویب ڈویلپر جو مقامی ذائقے اور عالمی معیارات کے ساتھ ڈیجیٹل تجربات بناتا ہے۔",
+                viewWork: "میرا کام دیکھیں",
+                hireMe: "مجھے ملازمت دیں",
+                myProjects: "میرے پروجیکٹس",
+                project1Title: "پاک کارٹ - ای کامرس",
+                project1Desc: "پاکستانی دستکاری میں مہارت رکھنے والا ایک ای کامرس پلیٹ فارم جس میں ملٹی وینڈر سپورٹ ہے۔",
+                liveDemo: "لائیو ڈیمو",
+                viewCode: "کوڈ دیکھیں",
+                mySkills: "میری مہارتیں",
+                techSkills: "تکنیکی مہارتیں",
+                htmlCss: "ایچ ٹی ایم ایل/سی ایس ایس",
+                javascript: "جاوا اسکرپٹ",
+                react: "ری ایکٹ",
+                nodejs: "نوڈ جے ایس",
+                profSkills: "پیشہ ورانہ مہارتیں",
+                teamwork: "ٹیم ورک (جماعت سپرٹ)",
+                problemSolving: "مسائل حل کرنا",
+                adaptability: "موافقت (پاکستانی چائے کی طرح)",
+                communication: "مواصلات",
+                aboutMe: "میرے بارے میں",
+                aboutTitle: "لاہور، پاکستان سے ویب ڈویلپر",
+                aboutText1: "میں ایک پرجوش ویب ڈویلپر ہوں جسے جدید ویب ایپلی کیشنز بنانے کا 5+ سال کا تجربہ ہے۔ میں جاوا اسکرپٹ فریم ورکس میں مہارت رکھتا ہوں اور اپنی پاکستانی جڑوں کو برقرار رکھتے ہوئے دنیا بھر کے کلائنٹس کے ساتھ کام کر چکا ہوں۔",
+                aboutText2: "ٹیک میں میرا سفر کامسٹس یونیورسٹی لاہور سے شروع ہوا، اور اس وقت سے میں پاکستان اور اس سے باہر کے لوگوں کے لیے حقیقی مسائل حل کرنے والے ڈیجیٹل حل تخلیق کرنے کے لیے وقف ہوں۔",
+                name: "نام",
+                email: "ای میل",
+                education: "تعلیم",
+                phone: "فون",
+                interests: "ذاتی دلچسپیاں",
+                foodStreet: "فوڈ اسٹریٹ کے دورے",
+                poetry: "اردو شاعری",
+                northern: "شمالی علاقے",
+                cricket: "کرکٹ",
+                getInTouch: "رابطہ کریں",
+                contactInfo: "رابطے کی معلومات",
+                location: "مقام",
+                callWhatsapp: "کال/واٹس ایپ",
+                followMe: "مجھے فالو کریں",
+                yourName: "آپ کا نام",
+                yourEmail: "آپ کا ای میل",
+                subject: "موضوع",
+                message: "پیغام",
+                sendMessage: "پیغام بھیجیں",
+                copyright: "© 2023 علی خان۔ تمام حقوق محفوظ ہیں۔"
+            }
+        };
+
+        // Current language
+        let currentLang = 'en';
+        const htmlElement = document.documentElement;
+
+        // Function to switch language
+        function switchLanguage(lang) {
+            currentLang = lang;
+            htmlElement.lang = lang;
+            htmlElement.dir = lang === 'ur' ? 'rtl' : 'ltr';
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                element.textContent = translations[lang][key];
+            });
+
+            // Update placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                element.placeholder = translations[lang][key];
+            });
+
+            // Update button text
+            document.querySelector('.language-toggle').innerHTML = 
+                `${translations[lang]['language']} <i class="fas fa-globe"></i>`;
+        }
+
+        // Initialize language
+        switchLanguage(currentLang);
+
+        // Language toggle button
+        document.querySelector('.language-toggle').addEventListener('click', () => {
+            const newLang = currentLang === 'en' ? 'ur' : 'en';
+            switchLanguage(newLang);
+        });
+
+        // The following code is already declared above, so do not redeclare:
+        // const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        // const navLinks = document.querySelector('.nav-links');
+        // const contactForm = document.querySelector('.contact-form form');
+        // Remove duplicate declarations to avoid errors.
     </script>
 </body>
 </html>
